@@ -22699,6 +22699,12 @@ class AppComplejos:
         self.page.overlay.append(snack_bar)
         self.page.update()
 
+# Crea la aplicación ASGI compatible
+app = ft.app(main, view=None)
+
+# Esto es necesario para que Gunicorn/Uvicorn pueda encontrar la aplicación
+asgi_app = app
+
 app = AppComplejos()
 
 if __name__ == "__main__":
