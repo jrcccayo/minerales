@@ -22699,16 +22699,13 @@ class AppComplejos:
         self.page.overlay.append(snack_bar)
         self.page.update()
 
-# Crea la aplicación ASGI compatible
-app = ft.app(main, view=None)
 
-# Esto es necesario para que Gunicorn/Uvicorn pueda encontrar la aplicación
-asgi_app = app
 
 app = AppComplejos()
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "8000"))  # Usa 8000 como puerto por defecto
     uvicorn.run(app, host="0.0.0.0", port=port)
-
+    
+asgi_app = app
 
