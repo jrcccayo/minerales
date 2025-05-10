@@ -1,6 +1,7 @@
 import flet as ft
 from flet import *
 from datetime import datetime, timedelta
+import uvicorn
 import bcrypt
 import re
 import os
@@ -22698,10 +22699,10 @@ class AppComplejos:
         self.page.overlay.append(snack_bar)
         self.page.update()
 
+app = AppComplejos()
+
 if __name__ == "__main__":
-    import uvicorn
-    import os  # Necesario para os.getenv
-    port = int(os.getenv("PORT", "8000"))  # Espacio después de "port" y antes del =
-    uvicorn.run(AppComplejos(), host="0.0.0.0", port=port)  # Falta una coma después de AppCompl 
+    port = int(os.getenv("PORT", "8000"))  # Usa 8000 como puerto por defecto
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
 
