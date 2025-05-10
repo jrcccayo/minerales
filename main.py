@@ -22699,8 +22699,10 @@ class AppComplejos:
         self.page.update()
 
 if __name__ == "__main__":
-    app = AppComplejos()
-    ft.app(target=app.main,view=ft.WEB_BROWSER,port=5000)        
+    import uvicorn
+    import os  # Necesario para os.getenv
+    port = int(os.getenv("PORT", "8000"))  # Espacio después de "port" y antes del =
+    uvicorn.run(AppComplejos(), host="0.0.0.0", port=port)  # Falta una coma después de AppCompl 
 
 """if __name__ == "__main__":
     import uvicorn
