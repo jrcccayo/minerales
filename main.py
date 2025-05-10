@@ -22470,6 +22470,7 @@ class AppComplejos:
     def main(self, page: ft.Page):
         self.page = page
         self.page.window.maximized = True
+        app = AppComplejos(page)
         page.title = "SISTEMA DE LIQUIDACION MERCEDES AI"
         
         self.page.vertical_alignment = ft.MainAxisAlignment.CENTER
