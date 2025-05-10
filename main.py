@@ -22469,7 +22469,7 @@ class AppComplejos:
 
     def main(self, page: ft.Page):
         self.page = page
-        app = AppComplejos(page)
+        #app = AppComplejos(page)
         self.page.window.maximized = True
         page.title = "SISTEMA DE LIQUIDACION MERCEDES AI"
         
