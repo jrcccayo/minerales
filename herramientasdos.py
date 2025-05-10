@@ -1,7 +1,7 @@
 import flet as ft
 from flet import *
 import mysql.connector
-from Conexion import CConection
+from Conexionuno import CConection
 
 
 def mostrar_mensaje(page, mensaje, tipo="error"):
