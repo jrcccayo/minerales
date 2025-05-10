@@ -22469,6 +22469,7 @@ class AppComplejos:
 
     def main(self, page: ft.Page):
         self.page = page
+        app = AppComplejos(page)
         self.page.window.maximized = True
         page.title = "SISTEMA DE LIQUIDACION MERCEDES AI"
         
@@ -22701,12 +22702,12 @@ class AppComplejos:
 
 
 
-app = AppComplejos()
+
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "8000"))  # Usa 8000 como puerto por defecto
     uvicorn.run(app, host="0.0.0.0", port=port)
 
-app = ft.app(main, view=None)
+
 asgi_app = app
 
